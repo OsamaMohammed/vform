@@ -24,7 +24,9 @@ class Form {
    */
   fill (data) {
     this.keys().forEach(key => {
-      this[key] = data[key]
+      if (data[key] !== undefined){
+        this[key] = data[key]
+      }
     })
   }
 
